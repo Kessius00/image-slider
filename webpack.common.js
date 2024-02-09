@@ -5,16 +5,15 @@ module.exports = {
 
   entry: {
     main: "./src/index.js",
-    vendor: "./src/vendor.js"
+    vendor: "./src/vendor.js",
   },
 
   module: {
     rules: [
-
       {
         //HTML
         test: /\.html$/i,
-        use: ["html-loader"]
+        use: ["html-loader"],
       },
 
       {
@@ -23,7 +22,7 @@ module.exports = {
         type: "asset/resource",
         generator: {
           filename: "imgs/[name].[hash].[ext]",
-        }
+        },
       },
 
       {
@@ -31,10 +30,9 @@ module.exports = {
         test: /\.(woff2?|ttf|eot)(\?v=\w+)?$/i,
         type: "asset/resource",
         generator: {
-          filename: "fonts/[name][ext][query]"
-        }
-      }
-    ]
+          filename: "fonts/[name][ext][query]",
+        },
+      },
+    ],
   },
-
-}
+};
